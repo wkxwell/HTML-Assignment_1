@@ -1,0 +1,502 @@
+/* -----------------------------------------------------------*/
+/*---------------PROG1245 Major Assignment 1------------------*/
+/* ---------------------KAIXIN JERRY WANG---------------------*/
+/* -----------------------------------------------------------*/
+*{
+	margin:0;
+	padding:0;
+}
+
+header,footer,
+article,section,
+hgroup,nav,
+figure{
+	display:block;
+}
+
+body{
+	font-size:0.825em;
+	color:rgb(252, 252, 252);
+	background-color:rgb(0, 0, 0);
+    background-image: linear-gradient(rgb(0, 0, 0) 35%,
+                                      rgba(0, 0, 0, 0.56) 60%,
+                                      rgb(0, 0, 0) 64%),
+                                     url(../image/background.jpeg);
+    /*background-image: linear-gradient(rgb(0, 0, 0),
+                      rgba(0, 0, 0, 0.94) 35%,
+                      rgba(0, 0, 0, 0.27) 60%,
+                      rgb(0, 0, 0) 64%,
+                      rgb(0, 0, 0)),
+                      url(..image/background.jpeg);*/
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: -450px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/* -----------------------------------------------------------*/
+/* ------------------Reusable Component--------------------*/
+/* -----------------------------------------------------------*/
+/* Links: */
+a, a:visited {
+	color:#888888;
+	text-decoration:none;
+	outline:none;
+    transition: transform 0.8s, color 0.8s;
+}
+
+a:hover{
+	color: red;
+    transform: scale(1.1)
+}
+
+a img{
+	border:none;
+}
+
+/* Headings: */
+h1,h2,h3{
+	font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 100;
+}
+
+h1{
+	font-size:3.5em;
+	padding:0.5em 0 0;
+    letter-spacing: 2px;
+	text-transform:none;
+    font-weight: 300;
+    border: 
+}
+
+hgroup img{
+    width: 10%;
+    position: absolute;
+    left:90%;
+    top: 4%
+}
+
+span{
+    color: #ff0000;
+}
+
+h3{
+	font-size:2em;
+	font-weight:300;
+	margin:0 0 1em;
+}
+
+article{
+	margin:3em 0;
+	padding:20px;
+    width:95%;
+    height: 400px;
+}
+
+/* -----------------------------------------------------------*/
+/* ------------------Navigation--------------------*/
+/* -----------------------------------------------------------*/
+nav{
+	background:url(../image/gradient_light.jpg) repeat-x 50% 50% #f8f8f8;
+	padding:0 5px;
+	position:absolute;
+	right:0;
+	top:4em;
+	
+	border:1px solid #FCFCFC;
+
+	-moz-box-shadow:0 1px 1px #333333;
+	-webkit-box-shadow:0 1px 1px #333333;
+	box-shadow:0 1px 1px #333333;
+}
+
+.clear:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+nav ul li{
+	display:inline;
+}
+
+nav ul li a,
+nav ul li a:visited{
+	color:#565656;
+	display:block;
+	float:left;
+	font-size:1.25em;
+	font-weight:bold;
+	margin:5px 2px;
+	padding:7px 10px 4px;
+	text-transform:uppercase;
+    transition: 1s;
+}
+
+nav ul li a:hover{
+	text-decoration:none;
+    color: #b93333;
+}
+
+nav, article, nav ul li a,figure{
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+/* -----------------------------------------------------------*/
+/* ------------------Articles--------------------*/
+/* -----------------------------------------------------------*/
+h2{
+	font-size:2.2em;
+	font-weight:200;
+	letter-spacing:0.01em;
+	text-transform:none;
+}
+
+h2 span{
+    color: red;
+    font-size: 130%;
+    font-weight: 100;
+}
+.go_up {
+	float: right; 
+	padding-right: 15px;  
+}
+p{
+	line-height:1.5em;
+	padding-bottom:1em;
+}
+.pbold{
+	font-size:1.2em;
+	font-weight:bold;
+	letter-spacing:0.01em;
+	text-transform:uppercase;
+}
+
+.line{
+	height:1px;
+	background-color:rgba(255, 255, 255, 0.06);
+	border-bottom:1px solid rgba(255, 255, 255, 0.13);
+	margin:1em 0;
+	overflow:hidden;
+}
+
+article .line{
+	background-color:rgba(255, 255, 255, 0.18);
+	border-bottom-color:rgba(255, 255, 255, 0.2);
+	margin:1.3em 0;
+}
+
+footer .line{
+	margin:2em 0;
+}
+
+/* Article styles: */
+
+#page{
+	width:960px;
+	margin:0 auto;
+	position:relative;
+}
+
+#article1{
+   background-image: linear-gradient(rgb(0, 0, 0),
+                      rgba(0, 0, 0, 0.61),
+                      rgb(0, 0, 0)),
+                      url(../image/r82.jpg);
+}
+
+#article2{
+    background-image: linear-gradient(rgb(0, 0, 0),
+                      rgba(0, 0, 0, 0.74),
+                      rgb(0, 0, 0)),
+                      url(../image/rs72.jpg);
+}
+
+#article3{
+    background-image: linear-gradient(rgb(0, 0, 0),
+                      rgba(0, 0, 0, 0.72),
+                      rgb(0, 0, 0)),
+                      url(../image/rs52.jpg);
+}
+
+#article4{
+    background-image: linear-gradient(rgb(0, 0, 0),
+                      rgba(0, 0, 0, 0.72),
+                      rgb(0, 0, 0)),
+                      url(../image/q82.jpg);
+}
+#article1,
+#article2,
+#article3,
+#article4{
+    background-size:cover;
+    background-position: center;
+    background-attachment: local;
+}
+
+#article1 img,
+#article2 img,
+#article3 img,
+#article4 img{
+    opacity: 0.8;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42));
+    transition: transform 1s, opacity 0.5s;
+}
+
+
+#article1 img:hover,
+#article2 img:hover,
+#article3 img:hover,
+#article4 img:hover{
+    transform:scale(1.05);
+    opacity: 1;
+}
+
+figure{
+	border:3px solid #142830;
+	float:right;
+	height:300px;
+	margin-left:15px;
+	overflow:hidden;
+	width:500px;
+}
+
+figure:hover{
+	-moz-box-shadow:0 0 2px #4D7788;
+	-webkit-box-shadow:0 0 2px #4D7788;
+	box-shadow:0 0 2px #4D7788;
+}
+
+/* -----------------------------------------------------------*/
+/* ------------------Footer--------------------*/
+/* -----------------------------------------------------------*/
+
+footer{
+	margin-bottom:30px;
+	text-align:center;
+	font-size:1em;
+    clear: both;
+}
+
+footer p{
+	margin-bottom:-2.5em;
+	position:relative;
+    text-transform: uppercase;
+}
+
+footer a,footer a:visited,
+footer a span{
+	color:#ffffff;
+	background-color:transparent;
+	padding:3px 4px;
+    transition: color 0.5s, transform 0.5s;
+}
+
+footer a,footer a:visited{
+    display:inline-block;
+}
+
+footer p span:hover{
+    color: red;
+    overflow-x: hidden;
+}
+footer a:hover{
+	text-decoration:none;
+    overflow-x: hidden;
+}
+
+/* -----------------------------------------------------------*/
+/* ------------------R8 PAGE-----Three Column Page------------*/
+/* -----------------------------------------------------------*/
+.page1 #article1{
+     background-image: linear-gradient(rgba(0, 0, 0, 0.99) 10%,
+                      rgb(0, 0, 0) 25%,
+                      rgba(0, 0, 0, 0.75) 55%,
+                      rgba(0, 0, 0, 0.92) 65%,
+                      rgba(0, 0, 0, 0) 85%,
+                      rgba(0, 0, 0, 0.99),
+                      rgb(0, 0, 0)),
+                      url(../image/r8_performance.jpg);
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 600px;
+    background-size: cover;
+}
+
+.page1 h2{
+    text-transform: none;
+    text-align-last: center;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.sideA,.sideB,.middle{
+    font-size: 120%;
+    text-align: center;
+    padding: 50px 1em;
+    margin-top: 150px;
+    
+}
+
+.sideA span,
+.sideB span,
+.middle span{
+    font-size: 50px;
+    line-height: 140%;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.sideA span:hover,
+.sideB span:hover,
+.middle span:hover{
+    font-size: 60px;
+    color: red;
+}
+
+.sideA span.small,
+.sideB span.small,
+.middle span.small{
+    font-size: 80%;
+    color: white;
+}
+
+.sideA{
+    float: left;
+    width: 24%;
+    height: 100px;
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.sideB{
+    float: right;
+    width: 24%;
+    height: 100px;
+    border-left: 2px solid rgb(255, 255, 255);
+}
+.middle{
+    float: left;
+    width: 41%;
+    height: 100px;
+}
+
+.middle img{
+    width: 105%;
+    border-radius: 15px;
+}
+
+.sideB img{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* -----------------------------------------------------------*/
+/* ------------------RS7 PAGE-----Two Column Page------------*/
+/* -----------------------------------------------------------*/
+.page2 #article1{
+    background-image: linear-gradient(rgb(0, 0, 0),
+                      rgba(0, 0, 0, 0.45) 25%,
+                      rgba(0, 0, 0, 0.96) 65%,
+                      rgba(0, 0, 0, 0.99) 85%,
+                      rgb(0, 0, 0)),
+                      url(../image/rs7.jpg);
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 650px;
+    background-attachment: contain;
+}
+
+.page2 h2{
+    text-align: center;
+    font-weight: 100;
+    text-transform: none;
+}
+
+.page2 .middle h2{
+    font-size: 180%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.32);;
+    font-weight: 200;
+    text-align: left;
+}
+
+.page2 .middle p{
+    font-size: 90%;
+    font-weight: 300;
+    margin-top: 1em;
+}
+
+.page2 .aside{
+    float: left;
+    width: 52%;
+    padding: 1em;
+    border-radius: 50px;
+    height: 550px;
+    margin-bottom: 1em;
+}
+
+.page2 .middle{
+    float:right;
+    text-align: left;
+    height: 130px;
+    width: 38%;
+    margin-top: 12em;
+    border-left: 2px solid rgb(255, 255, 255);
+}
+
+/* -----------------------------------------------------------*/
+/* ------------------RS5 PAGE-----Under Construction----------*/
+/* -----------------------------------------------------------*/
+.page3 #article1{
+    background-image: linear-gradient(rgb(0, 0, 0) 10%,
+                      rgba(0, 0, 0, 0) 25%,
+                      rgba(0, 0, 0, 0) 55%,
+                      rgba(0, 0, 0, 0.88) 85%,
+                      rgba(0, 0, 0, 0.96),
+                      rgb(0, 0, 0)),
+                      url(../image/rs5_construction.jpg);
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 650px;
+    background-attachment: contain;
+}
+
+.page3 h2{
+    text-align:center;
+}
+
+.page3 h2:last-child{
+    margin-top: 51%;
+    left: 36%;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+/* -----------------------------------------------------------*/
+/* ------------------Q8 PAGE-----Under Construction----------*/
+/* -----------------------------------------------------------*/
+
+.page4 #article1{
+    background-image: linear-gradient(rgb(0, 0, 0) 10%,
+                      rgba(0, 0, 0, 0) 25%,
+                      rgba(0, 0, 0, 0) 55%,
+                      rgba(0, 0, 0, 0.88) 85%,
+                      rgba(0, 0, 0, 0.96),
+                      rgb(0, 0, 0)),
+                      url(../image/q8_construction.jpg);
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 650px;
+    background-attachment: contain;
+}
+
+.page4 h2{
+    text-align:center;
+}
+
+.page4 h2:last-child{
+    margin-top: 51%;
+    left: 36%;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
